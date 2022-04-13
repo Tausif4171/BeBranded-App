@@ -19,30 +19,36 @@ const ProductDetail = () => {
     useEffect(() => {
         if (productId && productId !== "") {
             fetchSelectedProductDetail();
-            return () => {
-                dispatch(removeSelectedProduct());
-            }
         }
-        else {
+        return () => {
+            dispatch(removeSelectedProduct());
+        }
+        // else {
 
-        }
+        // }
     }, [productId]);
     return (
-
         <div>
-            <div className="ui link cards">
-                <div className="card">
-                    <div className="image">
-                        <img src={image} alt={title} />
-                    </div>
-                    <div className="content">
-                        <div className="header">{title}</div>
-                        <div className="meta price">$ {price}</div>
-                        <div className="meta">{category}</div>
-                        <div className="meta">{description}</div>
-                    </div>
-                </div>
-            </div>
+            {
+                Object.keys(product).length === 0 ? (
+                    <div>....loading</div>) :
+                    (
+                        <div>
+                            <div className="ui link cards">
+                                <div className="card">
+                                    <div className="image">
+                                        <img src={image} alt={title} />
+                                    </div>
+                                    <div className="content">
+                                        <div className="header">{title}</div>
+                                        <div className="meta price">$ {price}</div>
+                                        <div className="meta">{category}</div>
+                                        <div className="meta">{description}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>)
+            }
         </div>
     );
 }
