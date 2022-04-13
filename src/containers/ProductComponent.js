@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
@@ -8,6 +9,7 @@ const ProductComponent = () => {
         const { id, image, title, price, category } = product;
         return (
             <div className="four column wide" key={id}>
+                <Link to={`product/${id}`}>
                 <div className="ui link cards">
                     <div className="card">
                         <div className="image">
@@ -20,6 +22,7 @@ const ProductComponent = () => {
                         </div>
                     </div>
                 </div>
+                </Link>
             </div>
         );
     })
