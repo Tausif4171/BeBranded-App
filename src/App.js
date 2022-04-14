@@ -4,6 +4,7 @@ import Header from './containers/Header';
 import ProductListing from './containers/ProductListing';
 import ProductComponent from './containers/ProductComponent';
 import ProductDetail from './containers/ProductDetail';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
