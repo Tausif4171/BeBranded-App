@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button, Card } from 'react-bootstrap';
+import './style.css';
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
@@ -26,9 +27,9 @@ const ProductComponent = () => {
             //     </Link>
             // </div>
             <div key={id}>
-                 <Link to={`product/${id}`}>
-                <Card style={{ width: '18rem', borderRadius:20,top:70,marginBottom:70 }}>
-                    <Card.Img variant="top" style={{width:"100%", height:"100%", padding: "14px 60px 0px 60px"}} src={image} />
+                 <Link id="card-link" to={`product/${id}`}>
+                <Card style={{ width: '18rem', borderRadius:20,top:70,marginBottom:90 }}>
+                    <Card.Img variant="top" style={{width:"50%", height:"100%", margin: "14px 60px 0px 60px"}} src={image} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>

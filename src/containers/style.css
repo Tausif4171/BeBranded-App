@@ -1,0 +1,9 @@
+
+#card-link{
+    text-decoration: none !important;
+    color: brown;
+}
+
+#card-link:hover{
+    color: rgb(177, 17, 17);
+}
