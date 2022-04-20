@@ -27,20 +27,20 @@ const ProductComponent = () => {
             //     </Link>
             // </div>
             <div key={id}>
-                 <Link id="card-link" to={`product/${id}`}>
-                <Card style={{ width: '18rem', borderRadius:20,top:70,marginBottom:90 }}>
-                    <Card.Img variant="top" style={{width:"50%", height:"100%", margin: "14px 60px 0px 60px"}} src={image} />
-                    <Card.Body>
-                        <Card.Title>{title}</Card.Title>
-                        <Card.Text>
-                        $ {price}
-                        </Card.Text>
-                        <Card.Text>
-                        {category}
-                        </Card.Text>
-                        {/* <Button variant="primary">Go somewhere</Button> */}
-                    </Card.Body>
-                </Card>
+                <Link id="card-link" to={`product/${id}`}>
+                    <Card style={{ width: '18rem', borderRadius: 20, top: 70, marginBottom: 90 }}>
+                        <Card.Img variant="top" style={{ width: "50%", height: "100%", margin: "14px 60px 0px 60px" }} src={image} />
+                        <Card.Body>
+                            <Card.Title>{title}</Card.Title>
+                            <Card.Text>
+                                $ {price}
+                            </Card.Text>
+                            <Card.Text>
+                                {category}
+                            </Card.Text>
+                            {/* <Button variant="primary">Go somewhere</Button> */}
+                        </Card.Body>
+                    </Card>
                 </Link>
             </div>
         );
