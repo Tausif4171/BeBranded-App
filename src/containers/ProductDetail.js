@@ -35,7 +35,7 @@ const ProductDetail = () => {
                     (
                         <div style={{ margin: "60px 20px 0px 20px" }}>
                             <div className="ui link cards">
-                                <div className="card" style={{ width: "100%",height:"40rem",backgroundColor:"green", padding: "45px 80px 0px 80px" }}>
+                                <div className="card" style={{ width: "100%", height: "36rem", padding: "45px 80px 0px 80px",justifyContent:"space-between" }}>
                                     <table>
                                         <th>
                                             <tr>
@@ -47,7 +47,7 @@ const ProductDetail = () => {
                                             </tr>
                                         </th>
 
-                                        <th>
+                                        <th style={{padding: "0px 20px 0px 20px"}}>
                                             <tr>
                                                 <td>
                                                     <div className="content">
