@@ -33,21 +33,38 @@ const ProductDetail = () => {
                 Object.keys(product).length === 0 ? (
                     <div>....loading</div>) :
                     (
-                        <div>
+                        <div style={{ margin: "60px 20px 0px 20px" }}>
                             <div className="ui link cards">
-                                <div className="card">
-                                    <div className="image">
-                                        <img src={image} alt={title} />
-                                    </div>
-                                    <div className="content">
-                                        <div className="header">{title}</div>
-                                        <div className="meta price">$ {price}</div>
-                                        <div className="meta">{category}</div>
-                                        <div className="meta">{description}</div>
-                                    </div>
+                                <div className="card" style={{ width: "100%",height:"40rem",backgroundColor:"green", padding: "45px 80px 0px 80px" }}>
+                                    <table>
+                                        <th>
+                                            <tr>
+                                                <td>
+                                                    <div className="image">
+                                                        <img src={image} alt={title} style={{ width: "25rem", height: "100%" }} />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </th>
+
+                                        <th>
+                                            <tr>
+                                                <td>
+                                                    <div className="content">
+                                                        <div className="header">{title}</div>
+                                                        <div className="meta price">$ {price}</div>
+                                                        <div className="meta">{category}</div>
+                                                        <div className="meta">{description}</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </th>
+
+                                    </table>
                                 </div>
                             </div>
-                        </div>)
+                        </div>
+                    )
             }
         </div>
     );
