@@ -34,29 +34,27 @@ const ProductDetail = () => {
                     <div>....loading</div>) :
                     (
                         <div style={{ margin: "60px 20px 0px 20px" }}>
-                            <div className="ui link cards">
-                                <div className="card" style={{ width: "100%", height: "100%", padding: "45px 80px 50px 80px",justifyContent:"space-between" }}>
+                            <div className="">
+                                <div className="card" style={{ width: "100%", height: "100%", padding: "45px 80px 50px 80px", borderRadius:12}}>
                                     <table>
                                         <th>
                                             <tr>
-                                                <td>
                                                     <div className="image">
                                                         <img src={image} alt={title} style={{ width: "25rem", height: "100%" }} />
                                                     </div>
-                                                </td>
                                             </tr>
                                         </th>
 
                                         <th style={{padding: "0px 20px 0px 20px"}}>
-                                            <tr>
-                                                <td>
+                                            <tr style={{}}>
+                                                
                                                     <div className="content">
-                                                        <div className="header">{title}</div>
-                                                        <div className="meta price">$ {price}</div>
-                                                        <div className="meta">{category}</div>
-                                                        <div className="meta">{description}</div>
+                                                        <div className="header" style={{fontSize:24}}>{title}</div>
+                                                        <div className="meta price" style={{fontSize:20,color:"grey"}}>$ {price}</div>
+                                                        <div className="meta" style={{fontSize:22}}>{category}</div>
+                                                        <div className="meta" style={{fontSize:18,color:"grey"}}>{description}</div>
                                                     </div>
-                                                </td>
+                                               
                                             </tr>
                                         </th>
 
