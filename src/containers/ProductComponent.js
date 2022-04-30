@@ -28,7 +28,7 @@ const ProductComponent = () => {
             // </div>
             <div key={id}>
                 <Link id="card-link" to={`product/${id}`}>
-                    <Card style={{ width: '18rem', borderRadius: 20, top: 70, marginBottom: 90 }}>
+                    <Card className="card_zoom" style={{ width: '18rem', borderRadius: 20, top: 70, marginBottom: 90 }}>
                         <Card.Img variant="top" style={{ width: "50%", height: "100%", margin: "14px 60px 0px 60px" }} src={image} />
                         <Card.Body>
                             <Card.Title>{title}</Card.Title>
