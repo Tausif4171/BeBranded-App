@@ -1,9 +1,9 @@
 
 #card-link{
     text-decoration: none !important;
-    color: brown;
+    color: black;
 }
 
 #card-link:hover{
-    color: rgb(177, 17, 17);
+    color: black;
 }
