@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-  }
+
 #card-link{
     text-decoration: none !important;
     color: black;
@@ -11,9 +9,7 @@
 }
 
 .card_zoom {
-
     transition: transform .9s;
-
   }
   
   .card_zoom:hover {
