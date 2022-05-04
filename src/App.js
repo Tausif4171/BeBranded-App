@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './containers/Header';
+import Footer from './containers/Footer';
 import ProductListing from './containers/ProductListing';
 import ProductComponent from './containers/ProductComponent';
 import ProductDetail from './containers/ProductDetail';
@@ -16,6 +17,7 @@ function App() {
           <Route path='/product/:productId' element={<ProductDetail />}></Route>
           <Route>404 Page Not Found</Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
