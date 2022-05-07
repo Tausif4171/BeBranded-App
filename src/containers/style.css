@@ -17,3 +17,7 @@
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.2); 
   }
+.text-style{
+  color:white;
+  text-decoration:none
+}
