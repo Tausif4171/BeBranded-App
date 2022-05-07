@@ -9,10 +9,11 @@ const Home = () => {
     const dispatch = useDispatch();
 
     const getAllproducts = async () => {
-        const response = await axios.get("https://fakestoreapi.com/products")
+        const response = await axios.get("https://fakestoreapi.com/products?sort=desc&limit=8")
             .catch((err) => {
                 console.log("Error", err);
             });
+
         dispatch(setProducts(response.data));
     }
 
