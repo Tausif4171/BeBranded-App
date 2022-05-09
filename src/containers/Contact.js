@@ -19,7 +19,7 @@ export default function Contact() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label className="contact_content">Last Name</Form.Label>
-                  <Form.Control type="password" placeholder="Enter your first name" />
+                  <Form.Control type="password" placeholder="Enter your last name" />
                 </Form.Group>
               </div>
 
