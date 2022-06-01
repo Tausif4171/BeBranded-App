@@ -1,21 +1,60 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Card, Form, Button } from 'react-bootstrap'
 
 export default function Contact() {
 
   const [userData, setUserData] = useState({
-    firstName:"",
-    lastName:"",
-    phoneNumber:"",
-    email:"",
-    address:""
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    address: ""
   });
 
   let name, value;
-  const postUserData =(e)=>{
+  const postUserData = (e) => {
     name = e.target.name;
     value = e.target.value;
-    setUserData({...userData, [name]: value});
+    setUserData({ ...userData, [name]: value });
+  }
+
+  const submitData = async (e) => {
+    e.preventDefault();
+    const { firstName, lastName, phoneNumber, email, address } = userData;
+    
+    if (firstName && lastName && phoneNumber && email && address) {
+      const res = await fetch("https://ecommerce-app-8881d-default-rtdb.firebaseio.com/UserRecords.json",
+        {
+          method: "POST",
+          header: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            address
+          })
+        }
+      );
+
+      if (res) {
+        setUserData({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          email: "",
+          address: ""
+        });
+        alert("Data submitted sucessfully !!!");
+      }
+
+    }
+
+    else {
+      alert("Please fill all data !!!");
+    }
   }
 
   return (
@@ -35,29 +74,29 @@ export default function Contact() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label className="contact_content">Last Name</Form.Label>
-                  <Form.Control name="lastName" value={userData.lastName} onChange={postUserData}  type="text" placeholder="Enter your last name" />
+                  <Form.Control name="lastName" value={userData.lastName} onChange={postUserData} type="text" placeholder="Enter your last name" />
                 </Form.Group>
               </div>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label className="contact_content">Phone Number</Form.Label>
-                <Form.Control name="phoneNumber" value={userData.phoneNumber} onChange={postUserData}  type="number" placeholder="Enter your phone number" />
+                <Form.Control name="phoneNumber" value={userData.phoneNumber} onChange={postUserData} type="number" placeholder="Enter your phone number" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail" >
                 <Form.Label className="contact_content">Email address</Form.Label>
-                <Form.Control name="email" value={userData.email} onChange={postUserData}  type="email" placeholder="Enter email" />
+                <Form.Control name="email" value={userData.email} onChange={postUserData} type="email" placeholder="Enter email" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="contact_content">Address</Form.Label>
-                <Form.Control name="address" value={userData.address} onChange={postUserData}  as="textarea" rows={3} placeholder="Message..." />
+                <Form.Control name="address" value={userData.address} onChange={postUserData} as="textarea" rows={3} placeholder="Message..." />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="&nbsp;Check me out" className="contact_content" />
               </Form.Group>
-              <Button variant="primary" type="submit" className='submit_button'>
+              <Button variant="primary" type="submit" className='submit_button' onClick={submitData}>
                 Submit
               </Button>
             </Form>
