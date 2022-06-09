@@ -7,7 +7,7 @@ const Header = () => {
         <div>
             <Navbar bg="dark" variant="dark" expand="lg" style={{ justifyContent: "space-around", padding: "8px 38px 8px 38px" }}>
                 <Container fluid >
-                    <Navbar.Brand href="#" style={{ fontSize: 29 }}><Link to="/" className="text-style"> ClothesApp </Link></Navbar.Brand>
+                    <Navbar.Brand href="#" style={{ fontSize: 29 }}><Link to="/" className="text-style"> BeBranded </Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
