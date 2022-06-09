@@ -1,13 +1,14 @@
 import React from "react";
 import { Nav, Navbar, Container, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+// import logo from '../images/logo.ico';
 
 const Header = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark" expand="lg" style={{ justifyContent: "space-around", padding: "8px 38px 8px 38px" }}>
                 <Container fluid >
-                    <Navbar.Brand href="#" style={{ fontSize: 29 }}><Link to="/" className="text-style"> BeBranded </Link></Navbar.Brand>
+                    <Navbar.Brand href="#" style={{ fontSize: 29 }}><Link to="/" style={{ color: "#00BFFF"}} className="text-style"> BeBranded </Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
