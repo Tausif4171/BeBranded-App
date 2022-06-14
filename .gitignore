@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-
+/screenshots
 /.pnp
 .pnp.js
 

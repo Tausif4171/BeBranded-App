@@ -19,6 +19,5 @@ This App built in ReactJS and Redux Lifecycle Method.
 <img src="screenshots/page4.png">
 <h1>Contact Page</h1>
 <img src="screenshots/page5.png">
-
-
+<br><br>
 #KeepLearning #KeepGrowing #KeepEnjoying #KeepSmiling
