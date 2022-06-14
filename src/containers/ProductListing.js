@@ -23,8 +23,11 @@ const ProductListing = () => {
     console.log("Products:", products);
 
     return (
-        <div className="ui grid container" >
-            <ProductComponent />
+        <div>
+        <h1 style={{fontWeight:"bold",paddingTop:50}}>Latest Products</h1>
+            <div className="ui grid container" >
+                <ProductComponent />
+            </div>
         </div>
     );
 }
